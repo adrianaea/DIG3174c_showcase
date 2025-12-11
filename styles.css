@@ -287,3 +287,162 @@
             width: 6px;
             cursor: w-resize;
         }
+        
+        /* Responsive Design for Tablets */
+        @media (max-width: 768px) {
+            body {
+                font-size: 10px;
+            }
+            
+            .desktop-icon {
+                width: 56px;
+            }
+            
+            .desktop-icon img {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .desktop-icon span {
+                font-size: 9px;
+            }
+            
+            /* Adjust icon positioning for smaller screens */
+            .icon-mod2 { top: 15px; left: 15px; }
+            .icon-mod3 { top: 15px; left: 85px; }
+            .icon-mod4 { top: 15px; left: 155px; }
+            .icon-mod5 { top: 85px; left: 15px; }
+            .icon-mod6 { top: 85px; left: 85px; }
+            .icon-mod7 { top: 85px; left: 155px; }
+            .icon-mod8 { top: 155px; left: 15px; }
+            .icon-mod9 { top: 155px; left: 85px; }
+            .icon-mod10 { top: 155px; left: 155px; }
+            .icon-final { top: 225px; left: 15px; }
+            
+            .window {
+                min-width: 250px;
+                min-height: 180px;
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+            
+            .window-content {
+                font-size: 13px;
+                padding: 6px;
+            }
+            
+            .taskbar {
+                height: 26px;
+            }
+            
+            .start-button {
+                height: 20px;
+                padding: 0 12px;
+                font-size: 10px;
+            }
+            
+            .task-button {
+                height: 20px;
+                padding: 0 6px;
+                max-width: 120px;
+                font-size: 10px;
+            }
+            
+            .clock {
+                padding: 0 6px;
+                font-size: 9px;
+            }
+        }
+        
+        /* Responsive Design for Mobile Phones */
+        @media (max-width: 480px) {
+            body {
+                font-size: 9px;
+            }
+            
+            .desktop-icon {
+                width: 48px;
+            }
+            
+            .desktop-icon img {
+                width: 24px;
+                height: 24px;
+            }
+            
+            .desktop-icon span {
+                font-size: 8px;
+                line-height: 10px;
+            }
+            
+            /* Stack icons more tightly on mobile */
+            .icon-mod2 { top: 10px; left: 10px; }
+            .icon-mod3 { top: 10px; left: 70px; }
+            .icon-mod4 { top: 10px; left: 130px; }
+            .icon-mod5 { top: 70px; left: 10px; }
+            .icon-mod6 { top: 70px; left: 70px; }
+            .icon-mod7 { top: 70px; left: 130px; }
+            .icon-mod8 { top: 130px; left: 10px; }
+            .icon-mod9 { top: 130px; left: 70px; }
+            .icon-mod10 { top: 130px; left: 130px; }
+            .icon-final { top: 190px; left: 10px; }
+            
+            .window {
+                min-width: 200px;
+                min-height: 150px;
+                max-width: 98vw;
+                max-height: 88vh;
+            }
+            
+            .window-header {
+                padding: 1px 3px;
+                font-size: 10px;
+            }
+            
+            .window-title img {
+                width: 14px;
+                height: 14px;
+            }
+            
+            .window-button {
+                width: 14px;
+                height: 12px;
+                font-size: 7px;
+            }
+            
+            .window-content {
+                font-size: 12px;
+                padding: 4px;
+            }
+            
+            .taskbar {
+                height: 24px;
+            }
+            
+            .start-button {
+                height: 18px;
+                padding: 0 8px;
+                font-size: 9px;
+            }
+            
+            .start-button img {
+                width: 12px;
+                height: 12px;
+            }
+            
+            .task-button {
+                height: 18px;
+                padding: 0 4px;
+                max-width: 80px;
+                font-size: 9px;
+            }
+            
+            .clock {
+                padding: 0 4px;
+                font-size: 8px;
+            }
+            
+            /* Disable resize handles on mobile for better touch experience */
+            .resize-handle {
+                display: none;
+            }
+        }
