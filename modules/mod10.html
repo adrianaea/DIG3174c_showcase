@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 220px;
+        background-color: #fcffd1;
+        text-align: center;
+      }
+      h1 {
+        color: #333;
+      }
+      button {
+        padding: 20px 25px;
+        background-color: #216821;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #4a8d4a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="greeting">Hello there!</h1>
+    <button id="changeBtn">Change Greeting</button>
+ 
+  <script>
+    const heading = document.querySelector("#greeting");
+    const button = document.querySelector("#changeBtn");
+
+    function changeGreeting() {
+      const name = prompt("What's your name?");
+      if (!name) {
+        heading.textContent = "You didn’t enter a name!";
+      } else {
+        heading.textContent = `Welcome to the site, ${name}!`;
+        localStorage.setItem("username", name);
+      }
+    }
+    if (localStorage.getItem("username")) {
+      const storedName = localStorage.getItem("username");
+      heading.textContent = `Welcome back, ${storedName}!`;
+    }
+    button.addEventListener("click", changeGreeting);
+  </script>
+ </body>
+</html>

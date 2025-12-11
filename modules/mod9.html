@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShop | Products</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+nav {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.cart-icon-nav {
+  background-color: #ffd700;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-icon-nav:hover {
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product {
+  width: 220px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  float: left;
+  margin: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #222;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.buy-btn:hover {
+  background-color: #ffd700;
+  color: #222;
+}
+
+main div[style*="clear"] {
+  clear: both;
+}
+
+.clear-both {
+  clear: both;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 80px;
+}
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+} 
+footer a:hover {
+  text-decoration: underline;
+}
+footer a:visited {
+  color: #ffd700;
+}
+
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>OnlineShop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="cart-icon-nav">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Featured Products</h2>
+
+    <div class="product">
+      <img src="https://gettees.us/cdn/shop/files/PI-H-WCL-131-1_924087aa-a376-432e-a8f4-97daf99920f0.png?v=1746813908&width=2048" alt="Product 1">
+      <h3>Cozy Hoodie</h3>
+      <p>$45.00</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+
+    <div class="product">
+      <img src="https://www.alcott.eu/on/demandware.static/-/Sites-catalog-alcott-master/default/dw41859dde/hi-res/SC1357UO_WH2_001.jpg" alt="Product 2">
+      <h3>Stylish Sneakers</h3>
+      <p>$75.00</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+
+    <div class="product">
+      <img src="https://assets.bombas.com/image/fetch/c_crop,h_3040,w_3040/b_rgb:f1f1ee,c_scale,w_1068/f_auto,q_auto/https://images.contentful.com/09hbx69ra4p2/8XE8GJdTCFPNtoZJ6Aqe8/c5e33dc92cfad3781fcb3285815d8fa6/8593-WHITE-Adult-layflat-1-transparent.png" alt="Product 3">
+      <h3>Comfy Socks</h3>
+      <p>$10.00</p>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+    
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0053/5615/9064/files/CS6010_Male_OrganicCottonCap-NavyBlue_2_eae90c3f-ec9b-4664-86ce-84de08da173d.jpg?v=1738189571" alt="Product 3">
+      <h3>Classic Cap</h3>
+    <div class="clear-both"></div>
+      <a href="#" class="buy-btn">Add to Cart</a>
+    </div>
+
+    <div class="clear-both"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 OnlineShop</p>
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a> |
+    <a href="#">TikTok</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Music Releases</title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            margin: 0;
+        }
+        h1 {
+            color: navy;
+            font-size: 55px;
+        }
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgb(74, 104, 114);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 30px;
+            text-decoration: none;
+            color: rgb(254, 254, 254);
+        }
+        #home  {
+            font-weight: bolder;
+            text-decoration: underline;
+            margin-right: auto;
+            font-size: 1.7em;
+        }
+        .nav-right {
+            display: flex;
+            gap: 60px;
+        }
+        .card {
+            width: 700px; 
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #6492a0;
+            border-radius: 10px;
+            background-color: #f6f8fc;
+        }
+        .card h2 {
+            color: #06215a;
+            margin-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .card-content {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        .card img {
+            border-radius: 10px;
+            box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.342);
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+        }
+        .card-info {
+            flex: 1;
+            text-align: center;
+            padding-top: 10px;
+        }
+        footer {
+            background-color: rgb(5, 5, 5);
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: gray;
+        }
+        footer p {
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="" id="home">Home</a> 
+        <div class="nav-right">
+            <a href="">Artists</a>
+            <a href="">Albums</a>
+            <a href="">Songs</a>
+            <a href="index.html">New Releases</a> 
+        </div>
+    </nav>
+    <h1>New Music Releases</h1> 
+    <div class="info">
+        <p>Discover recent releases from different artists!</p>
+    </div>
+    
+    <div class="card">
+        <div class="card-content">
+            <img src="https://images.genius.com/568b4408c4b12b34df0262c24a15973d.1000x1000x1.png" alt="Yes Baby Single Cover">
+            <div class="card-info">
+                <h2>Madison Beer</h2>
+                <p><strong><em>yes baby</em></strong></p>
+                <p>Single Released Sept. 19th, 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <img src="https://riffmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2025/09/17140819/Cardi-B-Am-I-The-Drama_-Artwork-e1758143317461.jpg" alt="AM I THE DRAMA? Album Cover">
+            <div class="card-info">
+                <h2>Cardi B</h2>
+                <p><strong><em>AM I THE DRAMA?</em></strong></p>
+                <p>Album Released Sept. 19th, 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <img src="https://pbs.twimg.com/media/G1LsHeGWkAA9O-p.jpg" alt="Cuba Lost Tapes Single Cover">
+            <div class="card-info">
+                <h2>Tory Lanez</h2>
+                <p><strong><em>Cuba - Lost Tapes 2021</em></strong></p>
+                <p>Single Released Sept. 18th, 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Music Website</p>
+    </footer>
+</body>
+</html>

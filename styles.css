@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=MS+Sans+Serif:wght@400;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #008080 0%, #20B2AA 100%);
+            font-family: 'MS Sans Serif', sans-serif;
+            font-size: 11px;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .desktop {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+        
+        .desktop-icon {
+            position: absolute;
+            width: 64px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .desktop-icon img {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 5px;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
+        }
+        
+        .desktop-icon span {
+            display: block;
+            font-size: 10px;
+            line-height: 12px;
+            word-wrap: break-word;
+        }
+        
+        .window {
+            position: absolute;
+            background: #c3c3c3;
+            border: 2px outset #c3c3c3;
+            min-width: 300px;
+            min-height: 200px;
+            display: none;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        
+        .window.active {
+            z-index: 1001;
+        }
+        .window-header {
+            background: linear-gradient(90deg, #0080ff 0%, #0060df 100%);
+            color: white;
+            padding: 2px 4px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .window-title {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .window-title img {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 2px;
+        }
+        
+        .window-button {
+            width: 16px;
+            height: 14px;
+            background: #c3c3c3;
+            border: 1px outset #c3c3c3;
+            font-size: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .window-button:hover {
+            background: #e0e0e0;
+        }
+        
+        .window-button:active {
+            border: 1px inset #c3c3c3;
+        }
+        
+        .window-content {
+            padding: 8px;
+            background: white;
+            margin: 2px;
+            height: calc(100% - 24px);
+            overflow: hidden;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 28px;
+            background: #c3c3c3;
+            border-top: 1px solid #dfdfdf;
+            display: flex;
+            align-items: center;
+            padding: 2px 4px;
+            z-index: 2000;
+        }
+        
+        .start-button {
+            height: 22px;
+            padding: 0 16px;
+            background: #c3c3c3;
+            border: 1px outset #c3c3c3;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 4px;
+        }
+        
+        .start-button:hover {
+            background: #e0e0e0;
+        }
+        
+        .start-button:active {
+            border: 1px inset #c3c3c3;
+        }
+        
+        .taskbar-tasks {
+            flex: 1;
+            display: flex;
+            gap: 2px;
+        }
+        
+        .task-button {
+            height: 22px;
+            padding: 0 8px;
+            background: #c3c3c3;
+            border: 1px outset #c3c3c3;
+            cursor: pointer;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        
+        .task-button.active {
+            border: 1px inset #c3c3c3;
+            background: #a0a0a0;
+        }
+        
+        .clock {
+            padding: 0 8px;
+            border: 1px inset #c3c3c3;
+            font-size: 10px;
+        }
+        
+        /* Desktop icon positioning */
+        .icon-mod2 { top: 20px; left: 20px; }
+        .icon-mod3 { top: 20px; left: 100px; }
+        .icon-mod4 { top: 20px; left: 180px; }
+        .icon-mod5 { top: 100px; left: 20px; }
+        .icon-mod6 { top: 100px; left: 100px; }
+        .icon-mod7 { top: 100px; left: 180px; }
+        .icon-mod8 { top: 180px; left: 20px; }
+        .icon-mod9 { top: 180px; left: 100px; }
+        .icon-mod10 { top: 180px; left: 180px; }
+        .icon-final { top: 260px; left: 20px; }
+        
+        @keyframes windowOpen {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .window.opening {
+            animation: windowOpen 0.3s ease-out;
+        }
+        
+        /* Resize handles */
+        .resize-handle {
+            position: absolute;
+            background: transparent;
+            z-index: 10;
+            pointer-events: all;
+        }
+        
+        .resize-handle.nw {
+            top: -3px;
+            left: -3px;
+            width: 6px;
+            height: 6px;
+            cursor: nw-resize;
+        }
+        
+        .resize-handle.n {
+            top: -3px;
+            left: 6px;
+            right: 6px;
+            height: 6px;
+            cursor: n-resize;
+        }
+        
+        .resize-handle.ne {
+            top: -3px;
+            right: -3px;
+            width: 6px;
+            height: 6px;
+            cursor: ne-resize;
+        }
+        
+        .resize-handle.e {
+            top: 6px;
+            right: -3px;
+            bottom: 6px;
+            width: 6px;
+            cursor: e-resize;
+        }
+        
+        .resize-handle.se {
+            bottom: -3px;
+            right: -3px;
+            width: 6px;
+            height: 6px;
+            cursor: se-resize;
+        }
+        
+        .resize-handle.s {
+            bottom: -3px;
+            left: 6px;
+            right: 6px;
+            height: 6px;
+            cursor: s-resize;
+        }
+        
+        .resize-handle.sw {
+            bottom: -3px;
+            left: -3px;
+            width: 6px;
+            height: 6px;
+            cursor: sw-resize;
+        }
+        
+        .resize-handle.w {
+            top: 6px;
+            left: -3px;
+            bottom: 6px;
+            width: 6px;
+            cursor: w-resize;
+        }
